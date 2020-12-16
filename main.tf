@@ -66,13 +66,13 @@ module "cluster" {
 }
 
 module "registry" {
-  source       = "github.com/chrismellard/terraform-jx-registry-acr?ref=main"
+  source       = "github.com/jimmy03190/jx3-terraform-azure?ref=main"
   cluster_name = local.cluster_name
   principal_id = module.cluster.kubelet_identity_id
 }
 
 module "jx-boot" {
-  source          = "github.com/chrismellard/terraform-jx-boot?ref=main"
+  source          = "github.com/jimmy03190/jx3-terraform-azure?ref=main"
   depends_on      = [module.cluster]
   jx_git_url      = var.jx_git_url
   jx_bot_username = var.jx_bot_username
@@ -93,7 +93,7 @@ module "dns" {
 }
 
 module "secrets" {
-  source              = "github.com/chrismellard/terraform-jx-azurekeyvault?ref=main"
+  source              = "github.com/jimmy03190/jx3-azure-akv?ref=main"
   enabled             = var.key_vault_enabled
   principal_id        = module.cluster.kubelet_identity_id
   cluster_name        = local.cluster_name

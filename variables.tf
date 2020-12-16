@@ -1,11 +1,11 @@
 variable "cluster_name" {
-  description = "Variable to provide your desired name for the cluster. The script will create a random name if this is empty"
+  description = "Cluster for Jimmy Test"
   type        = string
-  default     = ""
+  default     = "Jimmy-Test-Cluster"
 }
 variable "location" {
   type        = string
-  default     = "australiaeast"
+  default     = "East US 2"
   description = "The Azure region in to which to provision the cluster"
 }
 
@@ -16,14 +16,17 @@ variable "location" {
 variable "jx_git_url" {
   description = "URL for the Jenkins X cluster git repository"
   type        = string
+  default     = "https://github.com/jimmy03190/jx3-terraform-azure"
 }
 variable "jx_bot_username" {
   description = "Bot username used to interact with the Jenkins X cluster git repository"
   type        = string
+  default     = "jimmy03190"
 }
 variable "jx_bot_token" {
   description = "Bot token used to interact with the Jenkins X cluster git repository"
   type        = string
+  default     = "56f513d0f9d94fb669905421e3bd03c85de565cb"
 }
 
 // ----------------------------------------------------------------------------
