@@ -55,17 +55,17 @@ variable "cluster_version" {
 }
 variable "network_resource_group_name" {
   type        = string
-  default     = ""
+  default     = "jimm0924"
   description = "The name of the resource group in to which to provision network resources. The script will create a random name if this is empty"
 }
 variable "cluster_resource_group_name" {
   type        = string
-  default     = ""
+  default     = "jimmy_cluster"
   description = "The name of the resource group in to which to provision AKS managed cluster. The script will create a random name if this is empty"
 }
 variable "cluster_node_resource_group_name" {
   type        = string
-  default     = ""
+  default     = "jimmy_cluster_node"
   description = "Resource group name in which to provision AKS cluster nodes. The script will create a random name if this is empty"
 }
 variable "vnet_cidr" {
@@ -151,12 +151,12 @@ variable "key_vault_enabled" {
 variable "key_vault_resource_group_name" {
   type        = string
   description = "Resouce group to create in which to place key vault"
-  default     = ""
+  default     = "jimmy0924"
 }
 variable "key_vault_name" {
   type        = string
   description = "Name of Azure Key Vault to create"
-  default     = ""
+  default     = "jimmy_vault"
 }
 variable "key_vault_sku" {
   type        = string
