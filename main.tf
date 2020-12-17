@@ -93,7 +93,7 @@ module "dns" {
 }
 
 module "secrets" {
-  source              = "github.com/jimmy03190/jx3-azure-vault?ref=main"
+  source              = "github.com/jimmy03190/jx3-azure-vault"
   enabled             = var.key_vault_enabled
   principal_id        = module.cluster.kubelet_identity_id
   cluster_name        = local.cluster_name

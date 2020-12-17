@@ -146,7 +146,7 @@ variable "dns_resource_group_name" {
 variable "key_vault_enabled" {
   type        = string
   description = "Flag to indicate whether to provision Azure Key Vault for secret storage"
-  default     = false
+  default     = true
 }
 variable "key_vault_resource_group_name" {
   type        = string
